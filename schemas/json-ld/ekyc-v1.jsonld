@@ -6,13 +6,13 @@
       "id": "@id",
       "type": "@type",
       "eKYC": {
-        "@id": "https://raw.githubusercontent.com/privado-id-vc-schema/schema/json-ld/ekyc-v1.jsonld#eKYC",
+        "@id": "https://raw.githubusercontent.com/chaincodechd/privado-id-vc-schema/main/schemas/json-ld/ekyc-v1.jsonld#eKYC",
         "@context": {
           "@version": 1.1,
           "@protected": true,
           "id": "@id",
           "type": "@type",
-          "ekyc-vocab": "https://github.com/privado-id-vc-schema/schema/ekyc.md#",
+          "ekyc-vocab": "https://github.com/chaincodechd/privado-id-vc-schema/blob/main/schemas/ekyc.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
           "aadhaarNumber": {
             "@id": "ekyc-vocab:aadhaarNumber",
