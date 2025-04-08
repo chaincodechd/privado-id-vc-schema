@@ -1,0 +1,41 @@
+{
+  "@context": [
+    {
+      "@version": 1.1,
+      "@protected": true,
+      "id": "@id",
+      "type": "@type",
+      "JobCard": {
+        "@id": "https://raw.githubusercontent.com/privado-id-vc-schema/schema/json-ld/jobcard-v1.jsonld#JobCard",
+        "@context": {
+          "@version": 1.1,
+          "@protected": true,
+          "id": "@id",
+          "type": "@type",
+          "jobcard-vocab": "https://github.com/privado-id-vc-schema/schema/jobcard.md#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "workerId": {
+            "@id": "jobcard-vocab:workerId",
+            "@type": "xsd:string"
+          },
+          "jobTitle": {
+            "@id": "jobcard-vocab:jobTitle",
+            "@type": "xsd:string"
+          },
+          "dateOfJoining": {
+            "@id": "jobcard-vocab:dateOfJoining",
+            "@type": "xsd:date"
+          },
+          "payLevel": {
+            "@id": "jobcard-vocab:payLevel",
+            "@type": "xsd:string"
+          },
+          "govBenefitsEligibility": {
+            "@id": "jobcard-vocab:govBenefitsEligibility",
+            "@type": "xsd:string"
+          }
+        }
+      }
+    }
+  ]
+}

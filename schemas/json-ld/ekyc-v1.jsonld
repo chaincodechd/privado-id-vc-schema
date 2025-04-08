@@ -1,0 +1,37 @@
+{
+  "@context": [
+    {
+      "@version": 1.1,
+      "@protected": true,
+      "id": "@id",
+      "type": "@type",
+      "eKYC": {
+        "@id": "https://raw.githubusercontent.com/privado-id-vc-schema/schema/json-ld/ekyc-v1.jsonld#eKYC",
+        "@context": {
+          "@version": 1.1,
+          "@protected": true,
+          "id": "@id",
+          "type": "@type",
+          "ekyc-vocab": "https://github.com/privado-id-vc-schema/schema/ekyc.md#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "aadhaarNumber": {
+            "@id": "ekyc-vocab:aadhaarNumber",
+            "@type": "xsd:string"
+          },
+          "fullName": {
+            "@id": "ekyc-vocab:fullName",
+            "@type": "xsd:string"
+          },
+          "dateOfBirth": {
+            "@id": "ekyc-vocab:dateOfBirth",
+            "@type": "xsd:date"
+          },
+          "gender": {
+            "@id": "ekyc-vocab:gender",
+            "@type": "xsd:string"
+          }
+        }
+      }
+    }
+  ]
+}
