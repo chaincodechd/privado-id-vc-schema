@@ -81,7 +81,14 @@
     },
     "credentialSubject": {
       "type": "object",
-      "required": ["id", "workerId", "jobTitle", "dateOfJoining", "payLevel"],
+      "required": [
+        "id",
+        "workerId",
+        "jobTitle",
+        "dateOfJoining",
+        "payLevel",
+        "numberOfFamilyMembers"
+      ],
       "properties": {
         "id": {
           "title": "Credential Subject ID",
@@ -102,7 +109,7 @@
           "type": "string"
         },
         "numberOfFamilyMembers": {
-          "type": "number"
+          "type": "integer"
         },
         "govBenefitsEligibility": {
           "type": "string"
