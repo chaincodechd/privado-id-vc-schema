@@ -101,6 +101,9 @@
         "payLevel": {
           "type": "string"
         },
+        "numberOfFamilyMembers": {
+          "type": "number"
+        },
         "govBenefitsEligibility": {
           "type": "string"
         }
