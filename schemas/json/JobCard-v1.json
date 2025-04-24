@@ -1,12 +1,16 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "$metadata": {
     "uris": {
       "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/privado-id-vc-schema/main/schemas/json-ld/jobcard-v1.jsonld",
       "jsonSchema": "https://raw.githubusercontent.com/chaincodechd/privado-id-vc-schema/main/schemas/json/JobCard-v1.json"
-    }
+    },
+    "version": "1.0",
+    "type": "JobCard"
   },
+  "description": "Worker's job card schema",
+  "title": "JobCard",
   "required": [
     "@context",
     "id",
@@ -36,22 +40,20 @@
       "required": ["id"],
       "properties": {
         "id": {
-          "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "type": "string"
         }
       }
     },
     "issuanceDate": {
-      "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "type": "string"
     },
     "expirationDate": {
-      "type": "string",
-      "format": "date-time"
+      "format": "date-time",
+      "type": "string"
     },
     "credentialSchema": {
-      "type": "object",
-      "required": ["id", "type"],
       "properties": {
         "id": {
           "type": "string",
@@ -60,7 +62,9 @@
         "type": {
           "type": "string"
         }
-      }
+      },
+      "required": ["id", "type"],
+      "type": "object"
     },
     "subjectPosition": {
       "type": "string",
@@ -80,41 +84,75 @@
       "type": "boolean"
     },
     "credentialSubject": {
-      "type": "object",
+      "description": "Stores the data of the credential",
+      "title": "Credential subject",
+      "properties": {
+        "id": {
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "format": "uri",
+          "type": "string"
+        },
+        "workerId": {
+          "description": "Worker ID",
+          "title": "Worker ID",
+          "type": "string"
+        },
+        "jobTitle": {
+          "description": "Job Title",
+          "title": "Job Title",
+          "type": "string"
+        },
+        "dateOfJoining": {
+          "description": "Date of Joining",
+          "title": "Date of Joining",
+          "format": "date",
+          "type": "string"
+        },
+        "payLevel": {
+          "description": "Pay Level",
+          "title": "Pay Level",
+          "type": "string"
+        },
+        "numberOfFamilyMembers": {
+          "description": "Number of Family Members",
+          "title": "Number of Family Members",
+          "type": "integer"
+        },
+        "govBenefitsEligibility": {
+          "description": "Gov Benefits Eligibility",
+          "title": "Gov Benefits Eligibility",
+          "type": "string"
+        }
+      },
       "required": [
-        "id",
         "workerId",
         "jobTitle",
         "dateOfJoining",
         "payLevel",
-        "numberOfFamilyMembers"
+        "numberOfFamilyMembers",
+        "govBenefitsEligibility"
       ],
+      "type": "object"
+    },
+    "credentialStatus": {
+      "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+      "title": "Credential Status",
       "properties": {
         "id": {
-          "title": "Credential Subject ID",
-          "type": "string",
-          "format": "uri"
-        },
-        "workerId": {
+          "description": "Id URL of the credentialStatus.",
+          "title": "Id",
+          "format": "uri",
           "type": "string"
         },
-        "jobTitle": {
-          "type": "string"
-        },
-        "dateOfJoining": {
-          "type": "string",
-          "format": "date"
-        },
-        "payLevel": {
-          "type": "string"
-        },
-        "numberOfFamilyMembers": {
-          "type": "integer"
-        },
-        "govBenefitsEligibility": {
+        "type": {
+          "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+          "title": "Type",
           "type": "string"
         }
-      }
+      },
+      "required": ["id", "type"],
+      "type": "object"
     }
   }
 }

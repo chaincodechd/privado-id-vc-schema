@@ -8,10 +8,8 @@
       "JobCard": {
         "@id": "https://raw.githubusercontent.com/chaincodechd/privado-id-vc-schema/main/schemas/json-ld/jobcard-v1.jsonld#JobCard",
         "@context": {
-          "@version": 1.1,
+          "@propagate": true,
           "@protected": true,
-          "id": "@id",
-          "type": "@type",
           "jobcard-vocab": "https://github.com/chaincodechd/privado-id-vc-schema/blob/main/schemas/jobcard.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
           "workerId": {
