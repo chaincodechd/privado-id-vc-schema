@@ -30,6 +30,10 @@
             "@id": "jobcard-vocab:payLevel",
             "@type": "xsd:string"
           },
+          "numberOfFamilyMembers": {
+            "@id": "jobcard-vocab:numberOfFamilyMembers",
+            "@type": "xsd:integer"
+          },
           "govBenefitsEligibility": {
             "@id": "jobcard-vocab:govBenefitsEligibility",
             "@type": "xsd:string"
