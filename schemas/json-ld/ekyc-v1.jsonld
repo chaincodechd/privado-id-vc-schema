@@ -38,7 +38,7 @@
           },
           "eKYC_verified_date": {
             "@id": "ekyc-voca:eKYC_verified_date",
-            "@type": "xsd:dateTime"
+            "@type": "xsd:string"
           },
           "Individual_Photo_Path": {
             "@id": "ekyc-voca:Individual_Photo_Path",

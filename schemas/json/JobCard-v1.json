@@ -140,13 +140,11 @@
         "Registration_Date": {
           "description": "Date when registered in system",
           "title": "Registration Date",
-          "format": "date-time",
           "type": "string"
         },
         "Entry_Date": {
           "description": "Date when data was entered",
           "title": "Entry Date",
-          "format": "date-time",
           "type": "string"
         },
         "work_days_alloted": {
@@ -162,7 +160,6 @@
         "dt_job_card_iss": {
           "description": "Date of job card issuance",
           "title": "Job Card Issue Date",
-          "format": "date-time",
           "type": "string"
         },
         "Epic_No": {
@@ -188,7 +185,6 @@
         "Dt_JC_verified_new": {
           "description": "Date of job card verification",
           "title": "JC Verified Date",
-          "format": "date-time",
           "type": "string"
         },
         "IS_LR_Beneficiary": {

@@ -54,7 +54,6 @@
         "eKYC_verified_date": {
           "description": "ate when eKYC verification was completed",
           "title": "eKYC Verified Date",
-          "format": "date-time",
           "type": "string"
         },
         "Individual_Photo_Path": {

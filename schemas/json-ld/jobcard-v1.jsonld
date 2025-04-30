@@ -105,11 +105,11 @@
           },
           "Registration_Date": {
             "@id": "jobcard-vocab:Registration_Date",
-            "@type": "xsd:dateTime"
+            "@type": "xsd:string"
           },
           "Entry_Date": {
             "@id": "jobcard-vocab:Entry_Date",
-            "@type": "xsd:dateTime"
+            "@type": "xsd:string"
           },
           "work_days_alloted": {
             "@id": "jobcard-vocab:work_days_alloted",
@@ -121,7 +121,7 @@
           },
           "dt_job_card_iss": {
             "@id": "jobcard-vocab:dt_job_card_iss",
-            "@type": "xsd:dateTime"
+            "@type": "xsd:string"
           },
           "Epic_No": {
             "@id": "jobcard-vocab:Epic_No",
@@ -141,7 +141,7 @@
           },
           "Dt_JC_verified_new": {
             "@id": "jobcard-vocab:Dt_JC_verified_new",
-            "@type": "xsd:dateTime"
+            "@type": "xsd:string"
           },
           "IS_LR_Beneficiary": {
             "@id": "jobcard-vocab:IS_LR_Beneficiary",
