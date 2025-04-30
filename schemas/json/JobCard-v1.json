@@ -1,6 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "type": "object",
   "$metadata": {
     "uris": {
       "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/privado-id-vc-schema/main/schemas/json-ld/jobcard-v1.jsonld",
@@ -9,24 +8,268 @@
     "version": "1.0",
     "type": "JobCard"
   },
-  "description": "Worker's job card schema",
-  "title": "JobCard",
-  "required": [
-    "@context",
-    "id",
-    "type",
-    "issuanceDate",
-    "credentialSubject",
-    "credentialSchema",
-    "credentialStatus",
-    "issuer"
-  ],
+  "description": "Joc Card schema for Workers",
+  "title": "Job Card",
   "properties": {
+    "credentialSubject": {
+      "description": "Stores the data of the credential",
+      "title": "Credential subject",
+      "properties": {
+        "id": {
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "format": "uri",
+          "type": "string"
+        },
+        "Reg_No": {
+          "description": "Unique identifier assigned during registration",
+          "title": "Registration Number",
+          "type": "string"
+        },
+        "Applicant_Number": {
+          "description": "Numeric identifier for the applicant",
+          "title": "Applicant Number",
+          "type": "string"
+        },
+        "Applicant_Name": {
+          "description": "Full name of the applicant",
+          "title": "Applicant Name",
+          "type": "string"
+        },
+        "Gender": {
+          "description": "Gender code (e.g., M/F/T)",
+          "title": "Gender",
+          "type": "string"
+        },
+        "Age": {
+          "description": "Age of the applicant in years",
+          "title": "Age",
+          "exclusiveMinimum": 0,
+          "type": "integer"
+        },
+        "Skilled": {
+          "description": "Skill status either yes or no",
+          "title": "Skilled Status",
+          "type": "string"
+        },
+        "Ac_No": {
+          "description": "Bank account number",
+          "title": "Account Number",
+          "type": "string"
+        },
+        "Relation_Code": {
+          "description": "Code representing relationship to head of household",
+          "title": "Relation Code",
+          "type": "integer"
+        },
+        "Bank_Name": {
+          "description": "Name of the bank",
+          "title": "Bank Name",
+          "type": "string"
+        },
+        "Name_as_per_Aadhaar": {
+          "description": "Name exactly as on Aadhaar card",
+          "title": "Aadhaar Name",
+          "type": "string"
+        },
+        "State_Code": {
+          "description": "Code of the state",
+          "title": "State Code",
+          "type": "string"
+        },
+        "District_Code": {
+          "description": "Code of the district",
+          "title": "District Code",
+          "type": "string"
+        },
+        "Block_Code": {
+          "description": "Code of the block",
+          "title": "Block Code",
+          "type": "string"
+        },
+        "Panchayat_Code": {
+          "description": "Code of the panchayat",
+          "title": "Panchayat Code",
+          "type": "string"
+        },
+        "Village_Code": {
+          "description": "Code of the village",
+          "title": "Village Code",
+          "type": "string"
+        },
+        "Family_Id": {
+          "description": "Family ID",
+          "title": "Family ID",
+          "type": "string"
+        },
+        "Head_of_Household": {
+          "description": "Name of the family head",
+          "title": "Head of Household",
+          "type": "string"
+        },
+        "Father_or_Husband_Name": {
+          "description": "Name of father or husband",
+          "title": "Guardian Name",
+          "type": "string"
+        },
+        "House_No": {
+          "description": "Applicant’s house number",
+          "title": "House Number",
+          "type": "string"
+        },
+        "Family_Photo_Path": {
+          "description": "Path to the family photo file",
+          "title": "Family Photo Path",
+          "type": "string"
+        },
+        "Photo_File_Name": {
+          "description": "File name of the family photo",
+          "title": "Photo File Name",
+          "type": "string"
+        },
+        "Individual_Photo_Path": {
+          "description": "Path to the individual's photo",
+          "title": "Individual Photo Path",
+          "type": "string"
+        },
+        "Individual_File_Name": {
+          "description": "File name of the individual's photo",
+          "title": "Individual File Name",
+          "type": "string"
+        },
+        "Registration_Date": {
+          "description": "Date when registered in system",
+          "title": "Registration Date",
+          "format": "date-time",
+          "type": "string"
+        },
+        "Entry_Date": {
+          "description": "Date when data was entered",
+          "title": "Entry Date",
+          "format": "date-time",
+          "type": "string"
+        },
+        "work_days_alloted": {
+          "description": "Number of work days assigned",
+          "title": "Work Days Allotted",
+          "type": "integer"
+        },
+        "job_card_iss": {
+          "description": "Job card issue status",
+          "title": "Job Card Issued",
+          "type": "string"
+        },
+        "dt_job_card_iss": {
+          "description": "Date of job card issuance",
+          "title": "Job Card Issue Date",
+          "format": "date-time",
+          "type": "string"
+        },
+        "Epic_No": {
+          "description": "Electoral Photo Identity Card number",
+          "title": "EPIC Number",
+          "type": "string"
+        },
+        "pincode": {
+          "description": "Area postal code",
+          "title": "PIN Code",
+          "type": "string"
+        },
+        "iay_reg_no": {
+          "description": "Registration number under IAY scheme",
+          "title": "IAY Registration No",
+          "type": "string"
+        },
+        "Is_JC_verified": {
+          "description": "Status of job card verification",
+          "title": "JC Verified",
+          "type": "string"
+        },
+        "Dt_JC_verified_new": {
+          "description": "Date of job card verification",
+          "title": "JC Verified Date",
+          "format": "date-time",
+          "type": "string"
+        },
+        "IS_LR_Beneficiary": {
+          "description": "Whether listed as LR scheme beneficiary",
+          "title": "LR Beneficiary",
+          "type": "string"
+        },
+        "IS_IAY_Beneficiary": {
+          "description": "Whether listed as IAY scheme beneficiary",
+          "title": "IAY Beneficiary",
+          "type": "string"
+        },
+        "Aadhaar_Numer": {
+          "description": "12-digit Aadhaar identification number",
+          "title": "Aadhaar Number",
+          "type": "string"
+        },
+        "Aadhaar_Numberverifed": {
+          "description": "Status of Aadhaar verification",
+          "title": "Aadhaar Verified",
+          "type": "string"
+        },
+        "Hash_of_Aadhaar": {
+          "description": "Encrypted hash of the Aadhaar number",
+          "title": "Aadhaar Hash",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Reg_No",
+        "Applicant_Number",
+        "Applicant_Name",
+        "Gender",
+        "Age",
+        "Skilled",
+        "Ac_No",
+        "Relation_Code",
+        "Bank_Name",
+        "Name_as_per_Aadhaar",
+        "State_Code",
+        "District_Code",
+        "Block_Code",
+        "Panchayat_Code",
+        "Village_Code",
+        "Family_Id",
+        "Head_of_Household",
+        "House_No",
+        "Registration_Date",
+        "Entry_Date",
+        "work_days_alloted",
+        "pincode",
+        "Aadhaar_Numer",
+        "Aadhaar_Numberverifed",
+        "Hash_of_Aadhaar"
+      ],
+      "type": "object"
+    },
     "@context": {
       "type": ["string", "array", "object"]
     },
+    "expirationDate": {
+      "format": "date-time",
+      "type": "string"
+    },
     "id": {
       "type": "string"
+    },
+    "issuanceDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "issuer": {
+      "type": ["string", "object"],
+      "format": "uri",
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": ["id"]
     },
     "type": {
       "type": ["string", "array"],
@@ -34,32 +277,32 @@
         "type": "string"
       }
     },
-    "issuer": {
-      "type": ["string", "object"],
-      "format": "uri",
-      "required": ["id"],
+    "credentialSchema": {
       "properties": {
         "id": {
           "format": "uri",
           "type": "string"
-        }
-      }
-    },
-    "issuanceDate": {
-      "format": "date-time",
-      "type": "string"
-    },
-    "expirationDate": {
-      "format": "date-time",
-      "type": "string"
-    },
-    "credentialSchema": {
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
         },
         "type": {
+          "type": "string"
+        }
+      },
+      "required": ["id", "type"],
+      "type": "object"
+    },
+    "credentialStatus": {
+      "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+      "title": "Credential Status",
+      "properties": {
+        "id": {
+          "description": "Id URL of the credentialStatus.",
+          "title": "Id",
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+          "title": "Type",
           "type": "string"
         }
       },
@@ -82,77 +325,16 @@
     },
     "updatable": {
       "type": "boolean"
-    },
-    "credentialSubject": {
-      "description": "Stores the data of the credential",
-      "title": "Credential subject",
-      "properties": {
-        "id": {
-          "description": "Stores the DID of the subject that owns the credential",
-          "title": "Credential subject ID",
-          "format": "uri",
-          "type": "string"
-        },
-        "workerId": {
-          "description": "Worker ID",
-          "title": "Worker ID",
-          "type": "string"
-        },
-        "jobTitle": {
-          "description": "Job Title",
-          "title": "Job Title",
-          "type": "string"
-        },
-        "dateOfJoining": {
-          "description": "Date of Joining",
-          "title": "Date of Joining",
-          "format": "date",
-          "type": "string"
-        },
-        "payLevel": {
-          "description": "Pay Level",
-          "title": "Pay Level",
-          "type": "string"
-        },
-        "numberOfFamilyMembers": {
-          "description": "Number of Family Members",
-          "title": "Number of Family Members",
-          "type": "integer"
-        },
-        "govBenefitsEligibility": {
-          "description": "Gov Benefits Eligibility",
-          "title": "Gov Benefits Eligibility",
-          "type": "string"
-        }
-      },
-      "required": [
-        "workerId",
-        "jobTitle",
-        "dateOfJoining",
-        "payLevel",
-        "numberOfFamilyMembers",
-        "govBenefitsEligibility"
-      ],
-      "type": "object"
-    },
-    "credentialStatus": {
-      "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
-      "title": "Credential Status",
-      "properties": {
-        "id": {
-          "description": "Id URL of the credentialStatus.",
-          "title": "Id",
-          "format": "uri",
-          "type": "string"
-        },
-        "type": {
-          "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
-          "title": "Type",
-          "type": "string"
-        }
-      },
-      "required": ["id", "type"],
-      "type": "object"
     }
-  }
+  },
+  "required": [
+    "credentialSubject",
+    "@context",
+    "id",
+    "issuanceDate",
+    "issuer",
+    "type",
+    "credentialSchema"
+  ],
+  "type": "object"
 }

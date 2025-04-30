@@ -1,42 +1,170 @@
 {
   "@context": [
     {
-      "@version": 1.1,
       "@protected": true,
+      "@version": 1.1,
       "id": "@id",
       "type": "@type",
       "JobCard": {
-        "@id": "https://raw.githubusercontent.com/chaincodechd/privado-id-vc-schema/main/schemas/json-ld/jobcard-v1.jsonld#JobCard",
         "@context": {
           "@propagate": true,
           "@protected": true,
           "jobcard-vocab": "https://github.com/chaincodechd/privado-id-vc-schema/blob/main/schemas/jobcard.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
-          "workerId": {
-            "@id": "jobcard-vocab:workerId",
+          "Reg_No": {
+            "@id": "jobcard-vocab:Reg_No",
             "@type": "xsd:string"
           },
-          "jobTitle": {
-            "@id": "jobcard-vocab:jobTitle",
+          "Applicant_Number": {
+            "@id": "jobcard-vocab:Applicant_Number",
             "@type": "xsd:string"
           },
-          "dateOfJoining": {
-            "@id": "jobcard-vocab:dateOfJoining",
-            "@type": "xsd:date"
-          },
-          "payLevel": {
-            "@id": "jobcard-vocab:payLevel",
+          "Applicant_Name": {
+            "@id": "jobcard-vocab:Applicant_Name",
             "@type": "xsd:string"
           },
-          "numberOfFamilyMembers": {
-            "@id": "jobcard-vocab:numberOfFamilyMembers",
+          "Gender": {
+            "@id": "jobcard-vocab:Gender",
+            "@type": "xsd:string"
+          },
+          "Age": {
+            "@id": "jobcard-vocab:Age",
             "@type": "xsd:integer"
           },
-          "govBenefitsEligibility": {
-            "@id": "jobcard-vocab:govBenefitsEligibility",
+          "Skilled": {
+            "@id": "jobcard-vocab:Skilled",
+            "@type": "xsd:string"
+          },
+          "Ac_No": {
+            "@id": "jobcard-vocab:Ac_No",
+            "@type": "xsd:string"
+          },
+          "Relation_Code": {
+            "@id": "jobcard-vocab:Relation_Code",
+            "@type": "xsd:integer"
+          },
+          "Bank_Name": {
+            "@id": "jobcard-vocab:Bank_Name",
+            "@type": "xsd:string"
+          },
+          "Name_as_per_Aadhaar": {
+            "@id": "jobcard-vocab:Name_as_per_Aadhaar",
+            "@type": "xsd:string"
+          },
+          "State_Code": {
+            "@id": "jobcard-vocab:State_Code",
+            "@type": "xsd:string"
+          },
+          "District_Code": {
+            "@id": "jobcard-vocab:District_Code",
+            "@type": "xsd:string"
+          },
+          "Block_Code": {
+            "@id": "jobcard-vocab:Block_Code",
+            "@type": "xsd:string"
+          },
+          "Panchayat_Code": {
+            "@id": "jobcard-vocab:Panchayat_Code",
+            "@type": "xsd:string"
+          },
+          "Village_Code": {
+            "@id": "jobcard-vocab:Village_Code",
+            "@type": "xsd:string"
+          },
+          "Family_Id": {
+            "@id": "jobcard-vocab:Family_Id",
+            "@type": "xsd:string"
+          },
+          "Head_of_Household": {
+            "@id": "jobcard-vocab:Head_of_Household",
+            "@type": "xsd:string"
+          },
+          "Father_or_Husband_Name": {
+            "@id": "jobcard-vocab:Father_or_Husband_Name",
+            "@type": "xsd:string"
+          },
+          "House_No": {
+            "@id": "jobcard-vocab:House_No",
+            "@type": "xsd:string"
+          },
+          "Family_Photo_Path": {
+            "@id": "jobcard-vocab:Family_Photo_Path",
+            "@type": "xsd:string"
+          },
+          "Photo_File_Name": {
+            "@id": "jobcard-vocab:Photo_File_Name",
+            "@type": "xsd:string"
+          },
+          "Individual_Photo_Path": {
+            "@id": "jobcard-vocab:Individual_Photo_Path",
+            "@type": "xsd:string"
+          },
+          "Individual_File_Name": {
+            "@id": "jobcard-vocab:Individual_File_Name",
+            "@type": "xsd:string"
+          },
+          "Registration_Date": {
+            "@id": "jobcard-vocab:Registration_Date",
+            "@type": "xsd:dateTime"
+          },
+          "Entry_Date": {
+            "@id": "jobcard-vocab:Entry_Date",
+            "@type": "xsd:dateTime"
+          },
+          "work_days_alloted": {
+            "@id": "jobcard-vocab:work_days_alloted",
+            "@type": "xsd:integer"
+          },
+          "job_card_iss": {
+            "@id": "jobcard-vocab:job_card_iss",
+            "@type": "xsd:string"
+          },
+          "dt_job_card_iss": {
+            "@id": "jobcard-vocab:dt_job_card_iss",
+            "@type": "xsd:dateTime"
+          },
+          "Epic_No": {
+            "@id": "jobcard-vocab:Epic_No",
+            "@type": "xsd:string"
+          },
+          "pincode": {
+            "@id": "jobcard-vocab:pincode",
+            "@type": "xsd:string"
+          },
+          "iay_reg_no": {
+            "@id": "jobcard-vocab:iay_reg_no",
+            "@type": "xsd:string"
+          },
+          "Is_JC_verified": {
+            "@id": "jobcard-vocab:Is_JC_verified",
+            "@type": "xsd:string"
+          },
+          "Dt_JC_verified_new": {
+            "@id": "jobcard-vocab:Dt_JC_verified_new",
+            "@type": "xsd:dateTime"
+          },
+          "IS_LR_Beneficiary": {
+            "@id": "jobcard-vocab:IS_LR_Beneficiary",
+            "@type": "xsd:string"
+          },
+          "IS_IAY_Beneficiary": {
+            "@id": "jobcard-vocab:IS_IAY_Beneficiary",
+            "@type": "xsd:string"
+          },
+          "Aadhaar_Numer": {
+            "@id": "jobcard-vocab:Aadhaar_Numer",
+            "@type": "xsd:string"
+          },
+          "Aadhaar_Numberverifed": {
+            "@id": "jobcard-vocab:Aadhaar_Numberverifed",
+            "@type": "xsd:string"
+          },
+          "Hash_of_Aadhaar": {
+            "@id": "jobcard-vocab:Hash_of_Aadhaar",
             "@type": "xsd:string"
           }
-        }
+        },
+        "@id": "https://raw.githubusercontent.com/chaincodechd/privado-id-vc-schema/main/schemas/json-ld/jobcard-v1.jsonld#JobCard"
       }
     }
   ]

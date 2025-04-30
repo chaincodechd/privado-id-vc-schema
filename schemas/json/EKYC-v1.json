@@ -1,28 +1,108 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "eKYC",
+  "description": "eKYC schema for Workers",
   "$metadata": {
     "uris": {
       "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/privado-id-vc-schema/main/schemas/json-ld/ekyc-v1.jsonld",
       "jsonSchema": "https://raw.githubusercontent.com/chaincodechd/privado-id-vc-schema/main/schemas/json/EKYC-v1.json"
-    }
+    },
+    "version": "1.0",
+    "type": "eKYC"
   },
-  "required": [
-    "@context",
-    "id",
-    "type",
-    "issuanceDate",
-    "credentialSubject",
-    "credentialSchema",
-    "credentialStatus",
-    "issuer"
-  ],
   "properties": {
+    "credentialSubject": {
+      "description": "Stores the data of the credential",
+      "title": "Credential subject",
+      "properties": {
+        "id": {
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "format": "uri",
+          "type": "string"
+        },
+        "Reg_No": {
+          "description": "Unique identifier assigned during registration",
+          "title": "Registration Number",
+          "type": "string"
+        },
+        "Applicant_Name": {
+          "description": "Full name of the applicant",
+          "title": "Applicant Name",
+          "type": "string"
+        },
+        "Applicant_name_as_per_Aadhaar": {
+          "description": "Name exactly as printed on Aadhaar card",
+          "title": "Aadhaar Name",
+          "type": "string"
+        },
+        "Aadhaar_number": {
+          "description": "12-digit Aadhaar identification number",
+          "title": "Aadhaar Number",
+          "type": "string"
+        },
+        "Aadhaar_hash_key_value": {
+          "description": "Encrypted hash of the Aadhaar number",
+          "title": "Aadhaar Hash Key",
+          "type": "string"
+        },
+        "eKYC_status": {
+          "description": "Current status of Aadhaar-based eKYC",
+          "title": "eKYC Status",
+          "type": "string"
+        },
+        "eKYC_verified_date": {
+          "description": "ate when eKYC verification was completed",
+          "title": "eKYC Verified Date",
+          "format": "date-time",
+          "type": "string"
+        },
+        "Individual_Photo_Path": {
+          "description": "File path to the individual's photo",
+          "title": "Photo Path",
+          "type": "string"
+        },
+        "Individual_File_Name": {
+          "description": "Name of the photo file",
+          "title": "Photo Filename",
+          "type": "string"
+        }
+      },
+      "required": [
+        "Reg_No",
+        "Applicant_Name",
+        "Applicant_name_as_per_Aadhaar",
+        "Aadhaar_number",
+        "Aadhaar_hash_key_value",
+        "eKYC_status",
+        "eKYC_verified_date"
+      ],
+      "type": "object"
+    },
     "@context": {
       "type": ["string", "array", "object"]
     },
+    "expirationDate": {
+      "format": "date-time",
+      "type": "string"
+    },
     "id": {
       "type": "string"
+    },
+    "issuanceDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "issuer": {
+      "type": ["string", "object"],
+      "format": "uri",
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": ["id"]
     },
     "type": {
       "type": ["string", "array"],
@@ -30,37 +110,37 @@
         "type": "string"
       }
     },
-    "issuer": {
-      "type": ["string", "object"],
-      "format": "uri",
-      "required": ["id"],
-      "properties": {
-        "id": {
-          "type": "string",
-          "format": "uri"
-        }
-      }
-    },
-    "issuanceDate": {
-      "type": "string",
-      "format": "date-time"
-    },
-    "expirationDate": {
-      "type": "string",
-      "format": "date-time"
-    },
     "credentialSchema": {
-      "type": "object",
-      "required": ["id", "type"],
       "properties": {
         "id": {
-          "type": "string",
-          "format": "uri"
+          "format": "uri",
+          "type": "string"
         },
         "type": {
           "type": "string"
         }
-      }
+      },
+      "required": ["id", "type"],
+      "type": "object"
+    },
+    "credentialStatus": {
+      "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+      "title": "Credential Status",
+      "properties": {
+        "id": {
+          "description": "Id URL of the credentialStatus.",
+          "title": "Id",
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": ["id", "type"],
+      "type": "object"
     },
     "subjectPosition": {
       "type": "string",
@@ -78,32 +158,16 @@
     },
     "updatable": {
       "type": "boolean"
-    },
-    "credentialSubject": {
-      "type": "object",
-      "required": ["id", "aadhaarNumber", "fullName", "dateOfBirth", "gender"],
-      "properties": {
-        "id": {
-          "title": "Credential Subject ID",
-          "type": "string",
-          "format": "uri"
-        },
-        "aadhaarNumber": {
-          "type": "string",
-          "pattern": "^[0-9]{12}$"
-        },
-        "fullName": {
-          "type": "string"
-        },
-        "dateOfBirth": {
-          "type": "string",
-          "format": "date"
-        },
-        "gender": {
-          "type": "string",
-          "enum": ["Male", "Female", "Other"]
-        }
-      }
     }
-  }
+  },
+  "required": [
+    "credentialSubject",
+    "@context",
+    "id",
+    "issuanceDate",
+    "issuer",
+    "type",
+    "credentialSchema"
+  ],
+  "type": "object"
 }
