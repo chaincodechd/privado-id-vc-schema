@@ -26,20 +26,10 @@
           "title": "Registration Number",
           "type": "string"
         },
-        "Applicant_Name": {
-          "description": "Full name of the applicant",
-          "title": "Applicant Name",
-          "type": "string"
-        },
-        "Applicant_name_as_per_Aadhaar": {
-          "description": "Name exactly as printed on Aadhaar card",
-          "title": "Aadhaar Name",
-          "type": "string"
-        },
-        "Aadhaar_number": {
-          "description": "12-digit Aadhaar identification number",
-          "title": "Aadhaar Number",
-          "type": "string"
+        "Applicant_No": {
+          "description": "Unique identifier for the applicant",
+          "title": "Applicant Number",
+          "type": "integer"
         },
         "Aadhaar_hash_key_value": {
           "description": "Encrypted hash of the Aadhaar number",
@@ -52,29 +42,23 @@
           "type": "string"
         },
         "eKYC_verified_date": {
-          "description": "ate when eKYC verification was completed",
+          "description": "Date when eKYC verification was completed",
           "title": "eKYC Verified Date",
           "type": "string"
         },
-        "Individual_Photo_Path": {
-          "description": "File path to the individual's photo",
-          "title": "Photo Path",
-          "type": "string"
-        },
-        "Individual_File_Name": {
-          "description": "Name of the photo file",
-          "title": "Photo Filename",
+        "Image_Hash": {
+          "description": "Hash of the individual's image",
+          "title": "Image Hash",
           "type": "string"
         }
       },
       "required": [
         "Reg_No",
-        "Applicant_Name",
-        "Applicant_name_as_per_Aadhaar",
-        "Aadhaar_number",
+        "Applicant_No",
         "Aadhaar_hash_key_value",
         "eKYC_status",
-        "eKYC_verified_date"
+        "eKYC_verified_date",
+        "Image_Hash"
       ],
       "type": "object"
     },

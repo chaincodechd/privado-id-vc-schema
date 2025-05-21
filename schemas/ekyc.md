@@ -7,69 +7,45 @@
 `Reg_No` represents the unique registration number assigned to the applicant.
 
 ```json
-  "Reg_No": "REG1234567"
+ "Reg_No": "REG1234567"
 ```
 
-## Applicant_Name
+## Applicant_No
 
-`Applicant_Name` represents the full name of the applicant.
-
-```json
-  "Applicant_Name": "John Doe"
-```
-
-## Applicant_name_as_per_Aadhaar
-
-`Applicant_name_as_per_Aadhaar` is the name of the applicant as it appears on the Aadhaar card.
+`Applicant_No` represents the unique identifier for the applicant, often linked to their registration.
 
 ```json
-  "Applicant_name_as_per_Aadhaar": "Johnathan Doe"
-```
-
-## Aadhaar_number
-
-`Aadhaar_number` represents the 12-digit Aadhaar number of the individual.
-
-```json
-  "Aadhaar_number": "123456789012"
+ "Applicant_No": "APP9876543"
 ```
 
 ## Aadhaar_hash_key_value
 
-`Aadhaar_hash_key_value` is the hashed value of the Aadhaar number used for secure verification.
+`Aadhaar_hash_key_value` is the hashed value of an identifier (like Aadhaar number) used for secure verification, without exposing the original number.
 
 ```json
-  "Aadhaar_hash_key_value": "e3b0c44298fc1c149afbf4c8996fb924"
+ "Aadhaar_hash_key_value": "e3b0c44298fc1c149afbf4c8996fb924a27ae41e4649b934ca495991b7852b855"
 ```
 
 ## eKYC_status
 
-`eKYC_status` indicates the current status of the Aadhaar-based eKYC verification process.
+`eKYC_status` indicates the current status of the electronic Know Your Customer (eKYC) verification process.
 
 ```json
-  "eKYC_status": "Verified"
+ "eKYC_status": "Verified"
 ```
 
 ## eKYC_verified_date
 
-`eKYC_verified_date` is the date and time when the eKYC verification was successfully completed.
+`eKYC_verified_date` is the date and time when the eKYC verification was successfully completed. It should be in a standard date format, preferably ISO 8601.
 
 ```json
-  "eKYC_verified_date": "2023-11-10T14:30:00Z"
+ "eKYC_verified_date": "2023-11-10T14:30:00Z"
 ```
 
-## Individual_Photo_Path
+## Image_Hash
 
-`Individual_Photo_Path` specifies the storage path of the applicant's photo file.
-
-```json
-  "Individual_Photo_Path": "/photos/john_doe.jpg"
-```
-
-## Individual_File_Name
-
-`Individual_File_Name` is the name of the file containing the applicant's photo.
+`Image_Hash` is a cryptographic hash of the applicant's photo, used for verifying the integrity of the image file without needing to store or transmit the image itself.
 
 ```json
-  "Individual_File_Name": "john_doe.jpg"
+ "Image_Hash": "sha256-a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890a1b2c3d4e5f67890"
 ```

@@ -8,222 +8,256 @@
     "version": "1.0",
     "type": "JobCard"
   },
-  "description": "Joc Card schema for Workers",
+  "description": "Job Card schema for Workers",
   "title": "Job Card",
   "properties": {
     "credentialSubject": {
       "description": "Stores the data of the credential",
       "title": "Credential subject",
+      "type": "object",
       "properties": {
         "id": {
-          "description": "Stores the DID of the subject that owns the credential",
+          "description": "Stores the DID of the subject that owns the credential.",
           "title": "Credential subject ID",
           "format": "uri",
           "type": "string"
         },
         "Reg_No": {
-          "description": "Unique identifier assigned during registration",
+          "description": "Unique identifier assigned during registration.",
           "title": "Registration Number",
           "type": "string"
         },
-        "Applicant_Number": {
-          "description": "Numeric identifier for the applicant",
-          "title": "Applicant Number",
-          "type": "string"
-        },
-        "Applicant_Name": {
-          "description": "Full name of the applicant",
-          "title": "Applicant Name",
-          "type": "string"
-        },
-        "Gender": {
-          "description": "Gender code (e.g., M/F/T)",
-          "title": "Gender",
-          "type": "string"
-        },
-        "Age": {
-          "description": "Age of the applicant in years",
-          "title": "Age",
-          "exclusiveMinimum": 0,
-          "type": "integer"
-        },
-        "Skilled": {
-          "description": "Skill status either yes or no",
-          "title": "Skilled Status",
-          "type": "string"
-        },
-        "Ac_No": {
-          "description": "Bank account number",
-          "title": "Account Number",
-          "type": "string"
-        },
-        "Relation_Code": {
-          "description": "Code representing relationship to head of household",
-          "title": "Relation Code",
-          "type": "integer"
-        },
-        "Bank_Name": {
-          "description": "Name of the bank",
-          "title": "Bank Name",
-          "type": "string"
-        },
-        "Name_as_per_Aadhaar": {
-          "description": "Name exactly as on Aadhaar card",
-          "title": "Aadhaar Name",
-          "type": "string"
-        },
         "State_Code": {
-          "description": "Code of the state",
+          "description": "State Code.",
           "title": "State Code",
           "type": "string"
         },
         "District_Code": {
-          "description": "Code of the district",
+          "description": "District Code.",
           "title": "District Code",
           "type": "string"
         },
         "Block_Code": {
-          "description": "Code of the block",
+          "description": "Block Code.",
           "title": "Block Code",
           "type": "string"
         },
         "Panchayat_Code": {
-          "description": "Code of the panchayat",
+          "description": "Panchayat Code (from JobCardDto, numeric string).",
           "title": "Panchayat Code",
           "type": "string"
         },
         "Village_Code": {
-          "description": "Code of the village",
+          "description": "Village Code.",
           "title": "Village Code",
           "type": "string"
         },
         "Family_Id": {
-          "description": "Family ID",
+          "description": "Family ID.",
           "title": "Family ID",
           "type": "string"
         },
         "Head_of_Household": {
-          "description": "Name of the family head",
+          "description": "Name of the family head.",
           "title": "Head of Household",
           "type": "string"
         },
         "Father_or_Husband_Name": {
-          "description": "Name of father or husband",
-          "title": "Guardian Name",
+          "description": "Father or Husband's Name.",
+          "title": "Father or Husband Name",
           "type": "string"
         },
         "House_No": {
-          "description": "Applicant’s house number",
+          "description": "House Number.",
           "title": "House Number",
           "type": "string"
         },
-        "Family_Photo_Path": {
-          "description": "Path to the family photo file",
-          "title": "Family Photo Path",
-          "type": "string"
-        },
-        "Photo_File_Name": {
-          "description": "File name of the family photo",
-          "title": "Photo File Name",
-          "type": "string"
-        },
-        "Individual_Photo_Path": {
-          "description": "Path to the individual's photo",
-          "title": "Individual Photo Path",
-          "type": "string"
-        },
-        "Individual_File_Name": {
-          "description": "File name of the individual's photo",
-          "title": "Individual File Name",
+        "Caste": {
+          "description": "Caste.",
+          "title": "Caste",
           "type": "string"
         },
         "Registration_Date": {
-          "description": "Date when registered in system",
+          "description": "Registration Date.",
           "title": "Registration Date",
           "type": "string"
         },
-        "Entry_Date": {
-          "description": "Date when data was entered",
-          "title": "Entry Date",
-          "type": "string"
-        },
-        "work_days_alloted": {
-          "description": "Number of work days assigned",
-          "title": "Work Days Allotted",
-          "type": "integer"
-        },
         "job_card_iss": {
-          "description": "Job card issue status",
-          "title": "Job Card Issued",
+          "description": "Job card issuance status/details.",
+          "title": "Job Card Issuance",
           "type": "string"
         },
         "dt_job_card_iss": {
-          "description": "Date of job card issuance",
-          "title": "Job Card Issue Date",
+          "description": "Date of job card issuance.",
+          "title": "Date of Job Card Issuance",
           "type": "string"
         },
-        "Epic_No": {
-          "description": "Electoral Photo Identity Card number",
-          "title": "EPIC Number",
+        "Is_JC_verified_new": {
+          "description": "Job card verification status (new).",
+          "title": "Is JC Verified (New)",
           "type": "string"
         },
-        "pincode": {
-          "description": "Area postal code",
-          "title": "PIN Code",
+        "FRA_Beneficiary": {
+          "description": "Forest Rights Act Beneficiary status.",
+          "title": "FRA Beneficiary",
           "type": "string"
         },
-        "iay_reg_no": {
-          "description": "Registration number under IAY scheme",
-          "title": "IAY Registration No",
+        "Regn_Entry_Date": {
+          "description": "Registration Entry Date.",
+          "title": "Registration Entry Date",
           "type": "string"
         },
-        "Is_JC_verified": {
-          "description": "Status of job card verification",
-          "title": "JC Verified",
+        "Event_Flag": {
+          "description": "Event Flag.",
+          "title": "Event Flag",
           "type": "string"
         },
-        "Dt_JC_verified_new": {
-          "description": "Date of job card verification",
-          "title": "JC Verified Date",
+        "Event_Reason": {
+          "description": "Event Reason.",
+          "title": "Event Reason",
           "type": "string"
         },
-        "IS_LR_Beneficiary": {
-          "description": "Whether listed as LR scheme beneficiary",
-          "title": "LR Beneficiary",
+        "Event_Date": {
+          "description": "Event Date.",
+          "title": "Event Date",
           "type": "string"
         },
-        "IS_IAY_Beneficiary": {
-          "description": "Whether listed as IAY scheme beneficiary",
-          "title": "IAY Beneficiary",
+        "Family_Photo_Hash": {
+          "description": "Family Photo Hash.",
+          "title": "Family Photo Hash",
           "type": "string"
         },
-        "Aadhaar_Numer": {
-          "description": "12-digit Aadhaar identification number",
-          "title": "Aadhaar Number",
-          "type": "string"
-        },
-        "Aadhaar_Numberverifed": {
-          "description": "Status of Aadhaar verification",
-          "title": "Aadhaar Verified",
-          "type": "string"
-        },
-        "Hash_of_Aadhaar": {
-          "description": "Encrypted hash of the Aadhaar number",
-          "title": "Aadhaar Hash",
-          "type": "string"
+        "Applicants": {
+          "description": "Array of applicants associated with the job card.",
+          "title": "Applicants",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "Reg_No": {
+                "type": "string",
+                "description": "Applicant's Registration Number."
+              },
+              "Applicant_No": {
+                "type": "integer",
+                "description": "Applicant's Number (numeric string)."
+              },
+              "Applicant_Name": {
+                "type": "string",
+                "description": "Applicant's Name."
+              },
+              "Gender": {
+                "type": "string",
+                "description": "Applicant's Gender."
+              },
+              "Age": {
+                "type": "integer",
+                "description": "Applicant's Age."
+              },
+              "Ac_No": {
+                "type": "string",
+                "description": "Applicant's Account Number."
+              },
+              "BPL_Data": {
+                "type": "string",
+                "description": "Applicant's BPL Data status."
+              },
+              "Disabled": {
+                "type": "string",
+                "description": "Applicant's Disability status."
+              },
+              "Relation_code": {
+                "type": "integer",
+                "description": "Applicant's Relation Code to Head of Household."
+              },
+              "Mobile_No": {
+                "type": "string",
+                "description": "Applicant's Mobile Number."
+              },
+              "Name_as_per_Aadhar": {
+                "type": "string",
+                "description": "Applicant's Name as per Aadhaar."
+              },
+              "Active4": {
+                "type": "integer",
+                "description": "Activity status indicator 4."
+              },
+              "Active3": {
+                "type": "integer",
+                "description": "Activity status indicator 3."
+              },
+              "Active2": {
+                "type": "integer",
+                "description": "Activity status indicator 2."
+              },
+              "Active1": {
+                "type": "integer",
+                "description": "Activity status indicator 1."
+              },
+              "App_Reg_date": {
+                "type": "string",
+                "description": "Applicant's Registration Date."
+              },
+              "UID_Enc_Cipher": {
+                "type": "string",
+                "description": "Encrypted UID Cipher."
+              },
+              "UID_NIC_DemoAuth": {
+                "type": "string",
+                "description": "UID NIC Demographic Authentication status."
+              },
+              "is_abps_enabled": {
+                "type": "string",
+                "description": "Aadhaar Based Payment System enabled status."
+              },
+              "Event_Flag": {
+                "type": "string",
+                "description": "Applicant-specific Event Flag."
+              },
+              "Event_Reason": {
+                "type": "string",
+                "description": "Applicant-specific Event Reason."
+              },
+              "Event_Date": {
+                "type": "string",
+                "description": "Applicant-specific Event Date."
+              },
+              "App_Name_BankPO": {
+                "type": "string",
+                "description": "Applicant's Name as per Bank/Post Office."
+              },
+              "Photo_Hash": {
+                "type": "string",
+                "description": "Applicant's Photo Hash."
+              }
+            },
+            "required": [
+              "Reg_No",
+              "Applicant_No",
+              "Applicant_Name",
+              "Gender",
+              "Age",
+              "Ac_No",
+              "BPL_Data",
+              "Disabled",
+              "Relation_code",
+              "Mobile_No",
+              "Name_as_per_Aadhar",
+              "App_Reg_date",
+              "UID_Enc_Cipher",
+              "UID_NIC_DemoAuth",
+              "is_abps_enabled",
+              "Event_Flag",
+              "Event_Reason",
+              "Event_Date",
+              "App_Name_BankPO",
+              "Photo_Hash"
+            ]
+          }
         }
       },
       "required": [
         "Reg_No",
-        "Applicant_Number",
-        "Applicant_Name",
-        "Gender",
-        "Age",
-        "Skilled",
-        "Ac_No",
-        "Relation_Code",
-        "Bank_Name",
-        "Name_as_per_Aadhaar",
         "State_Code",
         "District_Code",
         "Block_Code",
@@ -231,16 +265,21 @@
         "Village_Code",
         "Family_Id",
         "Head_of_Household",
+        "Father_or_Husband_Name",
         "House_No",
+        "Caste",
         "Registration_Date",
-        "Entry_Date",
-        "work_days_alloted",
-        "pincode",
-        "Aadhaar_Numer",
-        "Aadhaar_Numberverifed",
-        "Hash_of_Aadhaar"
-      ],
-      "type": "object"
+        "job_card_iss",
+        "dt_job_card_iss",
+        "Is_JC_verified_new",
+        "FRA_Beneficiary",
+        "Regn_Entry_Date",
+        "Event_Flag",
+        "Event_Reason",
+        "Event_Date",
+        "Family_Phot_Hash",
+        "Applicants"
+      ]
     },
     "@context": {
       "type": ["string", "array", "object"]

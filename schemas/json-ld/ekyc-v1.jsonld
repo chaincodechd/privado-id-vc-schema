@@ -13,39 +13,27 @@
           "ekyc-vocab": "https://github.com/chaincodechd/privado-id-vc-schema/blob/main/schemas/ekyc.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
           "Reg_No": {
-            "@id": "ekyc-voca:Reg_No",
+            "@id": "ekyc-vocab:Reg_No",
             "@type": "xsd:string"
           },
-          "Applicant_Name": {
-            "@id": "ekyc-voca:Applicant_Name",
-            "@type": "xsd:string"
-          },
-          "Applicant_name_as_per_Aadhaar": {
-            "@id": "ekyc-voca:Applicant_name_as_per_Aadhaar",
-            "@type": "xsd:string"
-          },
-          "Aadhaar_number": {
-            "@id": "ekyc-voca:Aadhaar_number",
-            "@type": "xsd:string"
+          "Applicant_No": {
+            "@id": "ekyc-vocab:Applicant_No",
+            "@type": "xsd:integer"
           },
           "Aadhaar_hash_key_value": {
-            "@id": "ekyc-voca:Aadhaar_hash_key_value",
+            "@id": "ekyc-vocab:Aadhaar_hash_key_value",
             "@type": "xsd:string"
           },
           "eKYC_status": {
-            "@id": "ekyc-voca:eKYC_status",
+            "@id": "ekyc-vocab:eKYC_status",
             "@type": "xsd:string"
           },
           "eKYC_verified_date": {
-            "@id": "ekyc-voca:eKYC_verified_date",
+            "@id": "ekyc-vocab:eKYC_verified_date",
             "@type": "xsd:string"
           },
-          "Individual_Photo_Path": {
-            "@id": "ekyc-voca:Individual_Photo_Path",
-            "@type": "xsd:string"
-          },
-          "Individual_File_Name": {
-            "@id": "ekyc-voca:Individual_File_Name",
+          "Image_Hash": {
+            "@id": "ekyc-vocab:Image_Hash",
             "@type": "xsd:string"
           }
         },

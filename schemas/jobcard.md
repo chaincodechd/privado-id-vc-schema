@@ -1,307 +1,206 @@
-[comment]: <> (Job Card Schema Documentation)
+[comment]: <> "Job Card Schema Documentation"
 
 # Job Card Schema
 
 ## Reg_No
 
-`Reg_No` represents the unique registration number.
+`Reg_No` represents the unique registration number assigned to a family during the job card registration process.
 
 ```json
-"Reg_No": "JBC123456"
-```
-
-## Applicant_Number
-
-`Applicant_Number` is a numeric identifier for the applicant.
-
-```json
-"Applicant_Number": "1001"
-```
-
-## Applicant_Name
-
-`Applicant_Name` is the full name of the job card holder.
-
-```json
-"Applicant_Name": "Ravi Kumar"
-```
-
-## Gender
-
-`Gender` indicates gender as M/F/T.
-
-```json
-"Gender": "M"
-```
-
-## Age
-
-`Age` is the age of the applicant in years.
-
-```json
-"Age": 35
-```
-
-## Skilled
-
-`Skilled` indicates whether the person is skilled.
-
-```json
-"Skilled": "Yes"
-```
-
-## Ac_No
-
-`Ac_No` is the bank account number.
-
-```json
-"Ac_No": "XXXXXXXXXXXX"
-```
-
-## Relation_Code
-
-`Relation_Code` represents the relation to head of household.
-
-```json
-"Relation_Code": 1
-```
-
-## Bank_Name
-
-`Bank_Name` is the name of the bank.
-
-```json
-"Bank_Name": "SBI"
-```
-
-## Name_as_per_Aadhaar
-
-`Name_as_per_Aadhaar` is the Aadhaar name.
-
-```json
-"Name_as_per_Aadhaar": "Ravi Kumar"
+"Reg_No": "JCRD123456"
 ```
 
 ## State_Code
 
-`State_Code` is the code for the state.
+`State_Code` is a string identifier denoting the state where the job card has been issued.
 
 ```json
-"State_Code": "10"
+"State_Code": "28"
 ```
 
 ## District_Code
 
-`District_Code` is the code for the district.
+`District_Code` refers to the code of the district in which the job card was registered.
 
 ```json
-"District_Code": "03"
+"District_Code": "530"
 ```
 
 ## Block_Code
 
-`Block_Code` is the code for the block.
+`Block_Code` identifies the block (administrative division) under which the job card falls.
 
 ```json
-"Block_Code": "001"
+"Block_Code": "101"
 ```
 
 ## Panchayat_Code
 
-`Panchayat_Code` is the code for the panchayat.
+`Panchayat_Code` indicates the numeric string representing the Panchayat jurisdiction.
 
 ```json
-"Panchayat_Code": "P123"
+"Panchayat_Code": "202005"
 ```
 
 ## Village_Code
 
-`Village_Code` is the code for the village.
+`Village_Code` is the code corresponding to the village in the registration.
 
 ```json
-"Village_Code": "V456"
+"Village_Code": "300789"
 ```
 
 ## Family_Id
 
-`Family_Id` is the identifier for the family.
+`Family_Id` is a string representing the unique identifier of the family unit.
 
 ```json
-"Family_Id": "F789"
+"Family_Id": "FAM1234567"
 ```
 
 ## Head_of_Household
 
-`Head_of_Household` is the name of the family head.
+`Head_of_Household` contains the full name of the household head.
 
 ```json
-"Head_of_Household": "Ram Kumar"
+"Head_of_Household": "Ravi Kumar"
 ```
 
 ## Father_or_Husband_Name
 
-`Father_or_Husband_Name` indicates guardian name.
+`Father_or_Husband_Name` stores the name of the father or husband of the head of the household.
 
 ```json
-"Father_or_Husband_Name": "Shyam Kumar"
+"Father_or_Husband_Name": "Suresh Kumar"
 ```
 
 ## House_No
 
-`House_No` is the house number.
+`House_No` refers to the house number or address detail for location identification.
 
 ```json
-"House_No": "123"
+"House_No": "12A"
 ```
 
-## Family_Photo_Path
+## Caste
 
-`Family_Photo_Path` is the image path of the family photo.
-
-```json
-"Family_Photo_Path": "/images/family1.jpg"
-```
-
-## Photo_File_Name
-
-`Photo_File_Name` is the file name of the family photo.
+`Caste` represents the caste classification of the family.
 
 ```json
-"Photo_File_Name": "family1.jpg"
-```
-
-## Individual_Photo_Path
-
-`Individual_Photo_Path` is the image path of the individual.
-
-```json
-"Individual_Photo_Path": "/images/ravi.jpg"
-```
-
-## Individual_File_Name
-
-`Individual_File_Name` is the file name of the individual's photo.
-
-```json
-"Individual_File_Name": "ravi.jpg"
+"Caste": "SC"
 ```
 
 ## Registration_Date
 
-`Registration_Date` is when the record was created.
+`Registration_Date` indicates the date of job card registration in `YYYY-MM-DD` format.
 
 ```json
-"Registration_Date": "2020-01-15T00:00:00Z"
-```
-
-## Entry_Date
-
-`Entry_Date` is when the data was entered.
-
-```json
-"Entry_Date": "2020-01-20T00:00:00Z"
-```
-
-## work_days_alloted
-
-`work_days_alloted` is the number of workdays allocated.
-
-```json
-"work_days_alloted": 90
+"Registration_Date": "2022-07-15"
 ```
 
 ## job_card_iss
 
-`job_card_iss` indicates if the card is issued.
+`job_card_iss` represents the status or details about job card issuance.
 
 ```json
-"job_card_iss": "Yes"
+"job_card_iss": "Issued"
 ```
 
 ## dt_job_card_iss
 
-`dt_job_card_iss` is the issue date of the job card.
+`dt_job_card_iss` is the date the job card was issued.
 
 ```json
-"dt_job_card_iss": "2020-01-25T00:00:00Z"
+"dt_job_card_iss": "2022-07-20"
 ```
 
-## Epic_No
+## Is_JC_verified_new
 
-`Epic_No` is the Electoral Photo Identity Card number.
+`Is_JC_verified_new` indicates the verification status of the job card.
 
 ```json
-"Epic_No": "XYZ1234567"
+"Is_JC_verified_new": "Yes"
 ```
 
-## pincode
+## FRA_Beneficiary
 
-`pincode` is the postal pin code.
+`FRA_Beneficiary` shows if the household is a beneficiary under the Forest Rights Act.
 
 ```json
-"pincode": "110001"
+"FRA_Beneficiary": "No"
 ```
 
-## iay_reg_no
+## Regn_Entry_Date
 
-`iay_reg_no` is registration number under IAY.
+`Regn_Entry_Date` is the timestamp of the registration entry.
 
 ```json
-"iay_reg_no": "IAY12345"
+"Regn_Entry_Date": "2022-07-15T10:00:00Z"
 ```
 
-## Is_JC_verified
+## Event_Flag
 
-`Is_JC_verified` shows job card verification status.
+`Event_Flag` is used to denote any special event or modification in the job card record.
 
 ```json
-"Is_JC_verified": "Yes"
+"Event_Flag": "Updated"
 ```
 
-## Dt_JC_verified_new
+## Event_Reason
 
-`Dt_JC_verified_new` is the date of job card verification.
+`Event_Reason` gives a textual reason for the event or update recorded.
 
 ```json
-"Dt_JC_verified_new": "2020-02-01T00:00:00Z"
+"Event_Reason": "Correction in name"
 ```
 
-## IS_LR_Beneficiary
+## Event_Date
 
-`IS_LR_Beneficiary` marks if LR scheme beneficiary.
+`Event_Date` indicates the date of the recorded event.
 
 ```json
-"IS_LR_Beneficiary": "No"
+"Event_Date": "2022-08-10"
 ```
 
-## IS_IAY_Beneficiary
+## Family_Photo_Hash
 
-`IS_IAY_Beneficiary` marks if IAY scheme beneficiary.
+`Family_Photo_Hash` is a hash value representing the family photograph for verification.
 
 ```json
-"IS_IAY_Beneficiary": "Yes"
+"Family_Photo_Hash": "sha256-f3b5c889d889..."
 ```
 
-## Aadhaar_Numer
+## Applicants
 
-`Aadhaar_Numer` is the 12-digit Aadhaar number.
-
-```json
-"Aadhaar_Numer": "123456789012"
-```
-
-## Aadhaar_Numberverifed
-
-`Aadhaar_Numberverifed` shows Aadhaar verification status.
+`Applicants` is an array containing details of individuals under the job card. Each entry includes the applicant's registration number, name, demographics, UID info, and status flags.
 
 ```json
-"Aadhaar_Numberverifed": "Verified"
-```
-
-## Hash_of_Aadhaar
-
-`Hash_of_Aadhaar` is the encrypted Aadhaar value.
-
-```json
-"Hash_of_Aadhaar": "abc123hash=="
+"Applicants": [
+  {
+    "Reg_No": "JCRD123456",
+    "Applicant_No": 1,
+    "Applicant_Name": "Sunita Devi",
+    "Gender": "Female",
+    "Age": 35,
+    "Ac_No": "XXXXXX1234",
+    "BPL_Data": "Yes",
+    "Disabled": "No",
+    "Relation_code": 1,
+    "Mobile_No": "9876543210",
+    "Name_as_per_Aadhar": "Sunita Devi",
+    "Active1": 1,
+    "Active2": 0,
+    "Active3": 0,
+    "Active4": 0,
+    "App_Reg_date": "2022-07-15",
+    "UID_Enc_Cipher": "enc_uid_hash",
+    "UID_NIC_DemoAuth": "Success",
+    "is_abps_enabled": "Yes",
+    "Event_Flag": "New",
+    "Event_Reason": "Added",
+    "Event_Date": "2022-07-15",
+    "App_Name_BankPO": "S. Devi",
+    "Photo_Hash": "sha256-photoapp1"
+  }
+]
 ```

@@ -15,42 +15,6 @@
             "@id": "jobcard-vocab:Reg_No",
             "@type": "xsd:string"
           },
-          "Applicant_Number": {
-            "@id": "jobcard-vocab:Applicant_Number",
-            "@type": "xsd:string"
-          },
-          "Applicant_Name": {
-            "@id": "jobcard-vocab:Applicant_Name",
-            "@type": "xsd:string"
-          },
-          "Gender": {
-            "@id": "jobcard-vocab:Gender",
-            "@type": "xsd:string"
-          },
-          "Age": {
-            "@id": "jobcard-vocab:Age",
-            "@type": "xsd:integer"
-          },
-          "Skilled": {
-            "@id": "jobcard-vocab:Skilled",
-            "@type": "xsd:string"
-          },
-          "Ac_No": {
-            "@id": "jobcard-vocab:Ac_No",
-            "@type": "xsd:string"
-          },
-          "Relation_Code": {
-            "@id": "jobcard-vocab:Relation_Code",
-            "@type": "xsd:integer"
-          },
-          "Bank_Name": {
-            "@id": "jobcard-vocab:Bank_Name",
-            "@type": "xsd:string"
-          },
-          "Name_as_per_Aadhaar": {
-            "@id": "jobcard-vocab:Name_as_per_Aadhaar",
-            "@type": "xsd:string"
-          },
           "State_Code": {
             "@id": "jobcard-vocab:State_Code",
             "@type": "xsd:string"
@@ -87,33 +51,13 @@
             "@id": "jobcard-vocab:House_No",
             "@type": "xsd:string"
           },
-          "Family_Photo_Path": {
-            "@id": "jobcard-vocab:Family_Photo_Path",
-            "@type": "xsd:string"
-          },
-          "Photo_File_Name": {
-            "@id": "jobcard-vocab:Photo_File_Name",
-            "@type": "xsd:string"
-          },
-          "Individual_Photo_Path": {
-            "@id": "jobcard-vocab:Individual_Photo_Path",
-            "@type": "xsd:string"
-          },
-          "Individual_File_Name": {
-            "@id": "jobcard-vocab:Individual_File_Name",
+          "Caste": {
+            "@id": "jobcard-vocab:Caste",
             "@type": "xsd:string"
           },
           "Registration_Date": {
             "@id": "jobcard-vocab:Registration_Date",
             "@type": "xsd:string"
-          },
-          "Entry_Date": {
-            "@id": "jobcard-vocab:Entry_Date",
-            "@type": "xsd:string"
-          },
-          "work_days_alloted": {
-            "@id": "jobcard-vocab:work_days_alloted",
-            "@type": "xsd:integer"
           },
           "job_card_iss": {
             "@id": "jobcard-vocab:job_card_iss",
@@ -123,44 +67,115 @@
             "@id": "jobcard-vocab:dt_job_card_iss",
             "@type": "xsd:string"
           },
-          "Epic_No": {
-            "@id": "jobcard-vocab:Epic_No",
+          "Is_JC_verified_new": {
+            "@id": "jobcard-vocab:Is_JC_verified_new",
             "@type": "xsd:string"
           },
-          "pincode": {
-            "@id": "jobcard-vocab:pincode",
+          "FRA_Beneficiary": {
+            "@id": "jobcard-vocab:FRA_Beneficiary",
             "@type": "xsd:string"
           },
-          "iay_reg_no": {
-            "@id": "jobcard-vocab:iay_reg_no",
+          "Regn_Entry_Date": {
+            "@id": "jobcard-vocab:Regn_Entry_Date",
             "@type": "xsd:string"
           },
-          "Is_JC_verified": {
-            "@id": "jobcard-vocab:Is_JC_verified",
+          "Event_Flag": {
+            "@id": "jobcard-vocab:Event_Flag",
             "@type": "xsd:string"
           },
-          "Dt_JC_verified_new": {
-            "@id": "jobcard-vocab:Dt_JC_verified_new",
+          "Event_Reason": {
+            "@id": "jobcard-vocab:Event_Reason",
             "@type": "xsd:string"
           },
-          "IS_LR_Beneficiary": {
-            "@id": "jobcard-vocab:IS_LR_Beneficiary",
+          "Event_Date": {
+            "@id": "jobcard-vocab:Event_Date",
             "@type": "xsd:string"
           },
-          "IS_IAY_Beneficiary": {
-            "@id": "jobcard-vocab:IS_IAY_Beneficiary",
+          "Family_Photo_Hash": {
+            "@id": "jobcard-vocab:Family_Photo_Hash",
             "@type": "xsd:string"
           },
-          "Aadhaar_Numer": {
-            "@id": "jobcard-vocab:Aadhaar_Numer",
+          "Applicants": {
+            "@id": "jobcard-vocab:Applicants"
+          },
+          "Applicant_No": {
+            "@id": "jobcard-vocab:Applicant_No",
             "@type": "xsd:string"
           },
-          "Aadhaar_Numberverifed": {
-            "@id": "jobcard-vocab:Aadhaar_Numberverifed",
+          "Applicant_Name": {
+            "@id": "jobcard-vocab:Applicant_Name",
             "@type": "xsd:string"
           },
-          "Hash_of_Aadhaar": {
-            "@id": "jobcard-vocab:Hash_of_Aadhaar",
+          "Gender": {
+            "@id": "jobcard-vocab:Gender",
+            "@type": "xsd:string"
+          },
+          "Age": {
+            "@id": "jobcard-vocab:Age",
+            "@type": "xsd:integer"
+          },
+          "Ac_No": {
+            "@id": "jobcard-vocab:Ac_No",
+            "@type": "xsd:string"
+          },
+          "BPL_Data": {
+            "@id": "jobcard-vocab:BPL_Data",
+            "@type": "xsd:string"
+          },
+          "Disabled": {
+            "@id": "jobcard-vocab:Disabled",
+            "@type": "xsd:string"
+          },
+          "Relation_code": {
+            "@id": "jobcard-vocab:Relation_code",
+            "@type": "xsd:integer"
+          },
+          "Mobile_No": {
+            "@id": "jobcard-vocab:Mobile_No",
+            "@type": "xsd:string"
+          },
+          "Name_as_per_Aadhar": {
+            "@id": "jobcard-vocab:Name_as_per_Aadhar",
+            "@type": "xsd:string"
+          },
+          "Active4": {
+            "@id": "jobcard-vocab:Active4",
+            "@type": "xsd:integer"
+          },
+          "Active3": {
+            "@id": "jobcard-vocab:Active3",
+            "@type": "xsd:integer"
+          },
+          "Active2": {
+            "@id": "jobcard-vocab:Active2",
+            "@type": "xsd:integer"
+          },
+          "Active1": {
+            "@id": "jobcard-vocab:Active1",
+            "@type": "xsd:integer"
+          },
+          "App_Reg_date": {
+            "@id": "jobcard-vocab:App_Reg_date",
+            "@type": "xsd:string"
+          },
+          "UID_Enc_Cipher": {
+            "@id": "jobcard-vocab:UID_Enc_Cipher",
+            "@type": "xsd:string"
+          },
+          "UID_NIC_DemoAuth": {
+            "@id": "jobcard-vocab:UID_NIC_DemoAuth",
+            "@type": "xsd:string"
+          },
+          "is_abps_enabled": {
+            "@id": "jobcard-vocab:is_abps_enabled",
+            "@type": "xsd:string"
+          },
+          "App_Name_BankPO": {
+            "@id": "jobcard-vocab:App_Name_BankPO",
+            "@type": "xsd:string"
+          },
+          "Photo_Hash": {
+            "@id": "jobcard-vocab:Photo_Hash",
             "@type": "xsd:string"
           }
         },
