@@ -154,7 +154,7 @@
         "Event_Flag",
         "Event_Reason",
         "Event_Date",
-        "Family_Phot_Hash",
+        "Family_Photo_Hash",
         "Applicants"
       ]
     },
