@@ -148,13 +148,7 @@
         "Registration_Date",
         "job_card_iss",
         "dt_job_card_iss",
-        "Is_JC_verified_new",
-        "FRA_Beneficiary",
         "Regn_Entry_Date",
-        "Event_Flag",
-        "Event_Reason",
-        "Event_Date",
-        "Family_Photo_Hash",
         "Applicants"
       ]
     },
