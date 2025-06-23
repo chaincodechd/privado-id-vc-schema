@@ -117,11 +117,6 @@
           "title": "Event Reason",
           "type": "string"
         },
-        "interim_household": {
-          "description": "Interim Household.",
-          "title": "Interim Household",
-          "type": "boolean"
-        },
         "Event_Date": {
           "description": "Event Date.",
           "title": "Event Date",
@@ -152,8 +147,7 @@
         "Registration_Date",
         "job_card_iss",
         "Regn_Entry_Date",
-        "Applicants",
-        "interim_household"
+        "Applicants"
       ]
     },
     "@context": {
