@@ -51,6 +51,10 @@
             "@id": "jobcard-vocab:House_No",
             "@type": "xsd:string"
           },
+          "interim_household": {
+            "@id": "jobcard-vocab:interim_household",
+            "@type": "xsd:boolean"
+          },
           "Caste": {
             "@id": "jobcard-vocab:Caste",
             "@type": "xsd:string"
