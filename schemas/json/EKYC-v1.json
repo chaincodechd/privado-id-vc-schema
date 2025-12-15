@@ -55,7 +55,6 @@
       "required": [
         "Reg_No",
         "Applicant_No",
-        "Aadhaar_hash_key_value",
         "eKYC_status",
         "eKYC_verified_date",
         "Image_Hash"
